@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #c9eaff, #e7ffe7);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.status-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#status {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+#resetBtn {
+  background: #ffffffa0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#resetBtn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+/* === Board === */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cell:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.05);
+}
+
+.cell.X {
+  color: #4b7bec;
+  text-shadow: 0 0 6px #a8caff;
+}
+
+.cell.O {
+  color: #20bf6b;
+  text-shadow: 0 0 6px #a2f3c8;
+}
+
+/* === Scoreboard === */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.score span:first-child {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.score span:last-child {
+  font-weight: 600;
+  color: #333;
+}
+
+/* === Winner Glow === */
+.winning {
+  animation: glow 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(0, 200, 100, 0.5); }
+  to { box-shadow: 0 0 20px rgba(0, 200, 100, 0.8); }
+}
