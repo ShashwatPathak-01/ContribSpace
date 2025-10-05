@@ -1,8 +1,24 @@
 # 🎉 Hacktoberfest Project Hub
 
-Welcome to [Repo Name] – a community-driven repository for Hacktoberfest 2025!
+Welcome to ContribSpace – a community-driven repository for Hacktoberfest 2025!
 
 This repository is the perfect place for developers, designers, and enthusiasts to showcase their projects, contribute to open-source, and earn Hacktoberfest credits!
+
+# 📁 Repository Structure
+All mini projects must go inside the folder(ex:python)/ in this format:
+
+folder_name/
+  your-github-username-project-title/
+    ├── main.py
+    ├── README.md  ← Instructions to run, explanation, etc.
+    └── (any other files)
+Example:
+
+python/
+  arya2004-todo-list/
+    ├── todo.py
+    ├── README.md
+    └── requirements.txt
 
 ## 🌟 Purpose
 
